@@ -12,7 +12,7 @@ defmodule MXkcd.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :httpotion]]
+    [applications: [:logger, :httpoison]]
   end
 
   # Dependencies can be hex.pm packages:
@@ -26,10 +26,9 @@ defmodule MXkcd.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.0"},
-      {:httpotion, "~> 0.2.0"},
-      {:timex, "~> 0.12.4"},
-      {:jsex, "~> 2.0"}
+      {:httpoison, "~> 0.4"},
+      {:timex, "~> 0.12.4"}, # date/time handling
+      {:poison, git: "https://github.com/devinus/poison.git"} # json library
     ]
   end
 end

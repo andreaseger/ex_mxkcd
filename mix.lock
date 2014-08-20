@@ -5,4 +5,5 @@
   "idna": {:package, "1.0.1"},
   "jsex": {:package, "2.0.0"},
   "jsx": {:package, "2.0.4"},
+  "poison": {:git, "https://github.com/devinus/poison.git", "cf4f2aed07915cbb8d60f1d34b56ce8c7d7d3f1a", []},
   "timex": {:package, "0.12.4"}}
