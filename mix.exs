@@ -26,7 +26,7 @@ defmodule MXkcd.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      {:httpoison, "~> 0.4"},
+      {:httpoison, "~> 0.4.1"},
       {:timex, "~> 0.12.4"}, # date/time handling
       {:poison, git: "https://github.com/devinus/poison.git"} # json library
     ]

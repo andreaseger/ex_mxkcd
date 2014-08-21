@@ -12,11 +12,12 @@ defmodule MXkcd do
       |> tweet
   end
 
+  def tweet(nil), do: nil
   def tweet(text), do: IO.puts(text)
 
   def handle_response(%Response{status_code: 304}) do
     IO.puts "No new comic strip"
-    System.halt(0)
+    nil
   end
   def handle_response(%Response{body: body, status_code: 200, headers: %{"Last-Modified" => last_modified}}) do
     :ok = File.write(Path.basename(@url), body)
@@ -25,8 +26,10 @@ defmodule MXkcd do
     body
   end
 
+  def decode_json(nil), do: nil
   def decode_json(body), do: Poison.decode!(body)
 
+  def build_tweet(nil), do: nil
   def build_tweet(json) do
     "#{json["safe_title"]} #{json["img"]} #{mobile_link(json["num"])} #xkcd"
   end
