@@ -28,7 +28,8 @@ defmodule MXkcd.Mixfile do
     [
       {:httpoison, "~> 0.4.1"},
       {:timex, "~> 0.12.4"}, # date/time handling
-      {:poison, git: "https://github.com/devinus/poison.git"} # json library
+      {:poison, "~> 1.0.1"}, # json library
+      {:extwitter, "~> 0.1.3"}
     ]
   end
 end
